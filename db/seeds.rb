@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+projects = [
+  {
+    name: "Project 1",
+    description: "New project"
+  },
+  {
+    name: "Project 2",
+    description: "Another project"
+  },
+  {
+    name: "Project 3",
+    description: "Rails application"
+  }
+]
+
+projects.each do |hash|
+  Project.create hash.merge(created_at: Time.now)
+end
