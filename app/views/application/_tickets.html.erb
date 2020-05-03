@@ -1,0 +1,10 @@
+<div class='tickets'>
+  <ul>
+    <% @tickets.each do |ticket| %>
+      <li>
+        <%= link_to ticket.name,  ticket_path(ticket) %>
+        <span> -- <%= ticket.status %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>

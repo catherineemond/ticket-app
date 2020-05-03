@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <header>
+      <span><strong>Ticketing</strong></span>
+      <%= link_to 'Projects', projects_path %>
+      <%= link_to 'Tickets', tickets_path %>
+      <hr>
+    </header>
     <%= yield %>
   </body>
 </html>

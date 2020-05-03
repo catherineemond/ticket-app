@@ -1,0 +1,18 @@
+<%= form_for @ticket do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br><br>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <br><br>
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+  <br><br>
+
+  <%= f.label :project %>
+  <%= f.select(:project_id, Project.all.collect {|p| [p.name, p.id]}) %>
+
+  <%= f.submit %>
+<% end %>

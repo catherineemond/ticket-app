@@ -1,0 +1,5 @@
+<h2><%= @ticket.name %></h2>
+<p><%= @ticket.body %></p>
+
+<%= link_to 'Edit Ticket', edit_ticket_path(@ticket) %>
+<%= link_to 'Delete Ticket', ticket_path(@ticket), method: 'delete' %>
