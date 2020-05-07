@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @tickets = Ticket.all.select {|ticket| ticket.project_id === @project.id }
+    @tickets = @project.tickets
   end
 
   def new

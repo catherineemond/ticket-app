@@ -12,8 +12,9 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = Ticket.new(ticket_params)
     binding.pry
+    @ticket = Ticket.new(ticket_params)
+    
     if @ticket.save
       redirect_to tickets_path
     else
@@ -45,6 +46,6 @@ class TicketsController < ApplicationController
   private
 
   def ticket_params
-    params.require(:ticket).permit(:name, :body, :status, :project_id)
+    params.require(:ticket).permit(:name, :body, :status, :project_id, :user_id)
   end
 end
